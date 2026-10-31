@@ -76,7 +76,12 @@ ENVIRONMENT
 
 ## Install
 
-Requires Node.js 18.17+ and git.
+**Requirements**
+
+- Node.js 18.17 or newer
+- git (to install straight from GitHub)
+- Windows, macOS or Linux
+- Docker is only needed for `diagnose` and `diagnose --build`.
 
 ```bash
 npx github:6t9xstar/devcontainer-json-validator              # run once
