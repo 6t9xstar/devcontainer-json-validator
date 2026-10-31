@@ -1,0 +1,29 @@
+// Broken on purpose: every problem DevContainer Doctor can spot.
+{
+  "name": "broken",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "target": "dev",
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli": {},
+    "node": "lts",
+    "./local-feature": {},
+    "not a feature": {}
+  },
+  "overrideFeatureInstallOrder": ["ghcr.io/devcontainers/features/python"],
+  "forwardPorts": [3000, 3000, 70000, "db:5432"],
+  "portsAttributes": { "9229": { "label": "debug" } },
+  "mounts": [
+    "source=${localWorkspaceFolder}/.secrets,target=/run/secrets,type=bind",
+    "source=cache,type=volume"
+  ],
+  "containerEnv": { "TOKEN": "${localEnv:DEVCONTAINER_DOCTOR_UNSET_TOKEN}", "X": "${workspaceFolder}" },
+  "postCreateCommand": "bash .devcontainer/scripts/missing.sh && npm ci",
+  "postStartCommand": "./.devcontainer/scripts/start.sh",
+  "shutdownAction": "stopEverything",
+  "remoteUser": "root",
+  "extensions": ["dbaeumer.vscode-eslint", "not-an-extension"],
+  "forwardport": [8080]
+}

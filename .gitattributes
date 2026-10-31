@@ -1,0 +1,5 @@
+* text=auto eol=lf
+*.sh text eol=lf
+
+# Test fixture that must keep Windows line endings.
+fixtures/broken/.devcontainer/scripts/start.sh -text

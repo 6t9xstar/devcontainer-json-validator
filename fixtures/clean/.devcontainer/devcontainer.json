@@ -1,0 +1,14 @@
+{
+  // A valid configuration
+  "name": "Node.js",
+  "build": { "dockerfile": "Dockerfile", "target": "dev" },
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "./local-feature": { "version": "1" },
+  },
+  "forwardPorts": [3000],
+  "portsAttributes": { "3000": { "label": "app" } },
+  "postCreateCommand": "npm ci",
+  "customizations": { "vscode": { "extensions": ["dbaeumer.vscode-eslint"] } },
+  "remoteUser": "node",
+}

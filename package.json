@@ -1,0 +1,50 @@
+{
+  "name": "devcontainer-doctor",
+  "version": "1.0.0",
+  "description": "devcontainer.json validator and VS Code Dev Containers / GitHub Codespaces troubleshooter. Checks Dockerfiles, Compose services, features, lifecycle scripts, CRLF line endings, ports and mounts.",
+  "type": "module",
+  "bin": {
+    "devcontainer-doctor": "bin/devcontainer-doctor.js"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "action.yml"
+  ],
+  "engines": {
+    "node": ">=18.17"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "dependencies": {
+    "yaml": "^2.9.1"
+  },
+  "keywords": [
+    "devcontainer",
+    "devcontainer.json",
+    "dev-containers",
+    "codespaces",
+    "vscode",
+    "validator",
+    "linter",
+    "docker",
+    "jsonc",
+    "cli",
+    "github-action",
+    "devcontainer json validator"
+  ],
+  "author": "6t9xstar",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/6t9xstar/devcontainer-json-validator.git"
+  },
+  "homepage": "https://github.com/6t9xstar/devcontainer-json-validator#readme",
+  "bugs": {
+    "url": "https://github.com/6t9xstar/devcontainer-json-validator/issues"
+  }
+}

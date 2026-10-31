@@ -1,0 +1,6 @@
+{
+  "name": "compose",
+  "dockerComposeFile": ["../compose.yaml", "compose.extra.yaml"],
+  "service": "app",
+  "runServices": ["app", "database"]
+}
